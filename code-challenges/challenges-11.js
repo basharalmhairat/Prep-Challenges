@@ -17,12 +17,13 @@
 
 function square(arr) {
 
-     var newArr = arr.map(function(val, index){
-            return { value:val*val};
-        })
-}
+    let newarr = arr.map(function(num) {
+        return num * num
+      })
+      return newarr;
+    }
 // 2) ------------------
-//
+//s
 // Ex:
 // [
 //     {
@@ -57,8 +58,9 @@ function square(arr) {
 //
 
 function fullName(item) {
-     EX.EX.map(FullName);
-        return [item.firstname+''+item.lastname+'     '];
+    let result = item.map(opj =>{ return `${opj.firstName} ${opj.lastName}`})
+    
+return result;
     }
    
 

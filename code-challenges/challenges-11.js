@@ -125,12 +125,12 @@ return result;
 
 function gradesAvg(arr) {
         
-    var newArr =EX.gradsList.map(function(val, length){
+    var newArr =arr.map(function(val, length){
 
-        return {value:val+val/EX.gradsList.length+1};
-      EX.Push(avg)
+        return {value:val+val/arr.length+1};
+      newarr.Push(avg)
     })
-    return 
+    return newArr;
 }
 
 

@@ -17,11 +17,11 @@
 
 function square(arr) {
 
-    let newarr = arr.map(function (num) {
-        return num * num
-    })
-    return newarr;
-}
+
+    let newarr = arr.map(function(num) {return num * num})
+      return newarr;
+    }
+
 // 2) ------------------
 //s
 // Ex:

@@ -15,14 +15,9 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
-    
-let newarr = arr.filter(function(num) {
-    if (num % 2!== 0) {
-       num =num ;
-    }
-    return num ;
-  })
-  return newarr;
+
+    let newarr = arr.filter(num => { return num % 2 !== 0 })
+    return newarr;
 }
 // 2) ---------------------
 // 
@@ -72,11 +67,13 @@ let newarr = arr.filter(function(num) {
 // ------------------------
 
 const cvsFiltration = (arr) => {
-if ((`${opj.yearsOfExperience}`) > 4 &&(`${opj. tech} `) == 'js'){
-    let newarr = arr.filter(opj =>{ return `${opj.firstName} ${opj.lastName}${opj.tech}`})
-} 
-return result;
-    }
+
+    arr = arr.filter(opj => { return arr.yearsOfExperience > 4 && arr.tech == 'JS' })
+    //   let fullName= arr.firstName + arr.lastName;
+
+    return arr;
+}
+
 
 // 3) ---------------------
 //
@@ -88,8 +85,9 @@ return result;
 // ------------------------
 
 const vowelsFiltration = (arr) => {
-    // write your code here
-} 
+    let arr1 = arr.filter(str => { return str.match(/^[aeiou]g/).test(str) });
+    return arr1;
+}
 
 // 4) ---------------------
 //
@@ -106,9 +104,12 @@ const vowelsFiltration = (arr) => {
 // ------------------------
 
 const skillComparison = (arr1, arr2) => {
-    // write your code here
-}
+    arr1 = arr1.filter(val => { return !arr2.includes(val) });
+    arr2 = arr2.filter(val => { return !arr1.includes(val) });
+    let arr3 = arr1 + arr2;
+    return arr3;
 
+}
 
 module.exports = { oddFiltration, cvsFiltration, vowelsFiltration, skillComparison };
 

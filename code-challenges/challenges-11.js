@@ -17,9 +17,7 @@
 
 function square(arr) {
 
-    let newarr = arr.map(function(num) {
-        return num * num
-      })
+    let newarr = arr.map(function(num) {return num * num})
       return newarr;
     }
 // 2) ------------------

@@ -38,11 +38,9 @@
 // ------------------------
 
 const objectCounter = (obj) => {
-    return arr.reduce(function(obj, name) {
-        obj[name] = obj[name] ? ++obj[name] : 1;
-        return obj;
-    }, {});
-
+ let arr = " ";
+  return arr.reduce((obj, name) =>{ obj[name] = obj[name] ? ++obj[name] : 1 });
+        
 }
 
 // 2) ---------------------
@@ -60,9 +58,12 @@ const objectCounter = (obj) => {
 
 const stringReverse = (str) => {
     
-        let x= str.reduce((rev, char) => char+rev, "").split("");
+     
+     
+        const arr = str.split('');
+        return arr.reduce((acc, val) => val + acc,"");
       
-   return x;
+       
 }
 
 
@@ -105,20 +106,16 @@ const stringReverse = (str) => {
 // ------------------------
 
 const statistics = (obj) => {
-    let res = res.reduce(function(a, b) {
-        if (!a[b]) {
-         
-          a[b] = 1;
-        } else {
-        
-          a[b]++;
-        }
-        
-        return a; 
-      }, {}); 
-      
-     return res;
-    }   
+  let arr = ' ';
+   return arr.reduce(function (allNames, name) {
+    if (name in allNames) {
+      allNames[name]++
+    }
+    else {
+      allNames[name] = 1
+    }
+    return allNames
+  })}   
       
 
 

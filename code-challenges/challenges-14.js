@@ -19,9 +19,11 @@
 // ------------------------
 
 const LastWord = (str) => {
-    let y = text.indexOf(arr.length-1);
-    let x = text.lastIndexOf(y);
-    let result = text.slice(x);
+    var n = str.split(" ");
+    let z= n[n.length - 1];
+    let y = n.indexOf(n-1);
+    let x = n.lastIndexOf(y);
+    let result = n.slice(x);
     return result;
 }
 
@@ -34,7 +36,7 @@ const LastWord = (str) => {
 // ------------------------
 
 const LastWord_2 = (str) => {
-    var n = words.split(" ");
+    var n = str.split(" ");
     return n[n.length - 1];
 
 }
@@ -52,7 +54,10 @@ const LastWord_2 = (str) => {
 // ------------------------
 
 const replaceWords = (str) => {
-    // write your code here
+
+   let x= str.indexOf("I", 1, "We");
+  let a= str.splice(x);
+ return a;
 }
 
 // 4) ---------------------
@@ -63,7 +68,8 @@ const replaceWords = (str) => {
 // ------------------------
 
 const arrToStr = (arr) => {
-    // write your code here
+  let a=  [arr.slice(0, -1).join(' '), arr.slice(-1)[0]].join(arr.length <4  ? ' ' : ', ');
+    return a;
 }
 
 // 5) ---------------------
@@ -79,7 +85,8 @@ const arrToStr = (arr) => {
 // ------------------------
 
 const letterCounter = (str) => {
-    // write your code here
+  let result =  str.reduce((b,c)=>((b[b.findIndex(d=>d.el===c)]||b[b.push({el:c,count:0})-1]).count++,b),[]);
+    return result ;
 }
 
 

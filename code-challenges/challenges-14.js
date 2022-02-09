@@ -19,11 +19,13 @@
 // ------------------------
 
 const LastWord = (str) => {
-    var n = str.split(" ");
-    let z= n[n.length - 1];
-    let y = n.indexOf(n-1);
-    let x = n.lastIndexOf(y);
-    let result = n.slice(x);
+    // var n = str.split(" ");
+    // let z= n[n.length - 1];
+    var x = str.lastIndexOf(" ")+1;
+    
+    // let y = str.indexOf(x);
+   
+     let result = str.slice(x);
     return result;
 }
 
@@ -68,7 +70,7 @@ const replaceWords = (str) => {
 // ------------------------
 
 const arrToStr = (arr) => {
-  let a=  [arr.slice(0, -1).join(' '), arr.slice(-1)[0]].join(arr.length <4  ? ' ' : ', ');
+  let a=  [arr.slice(0, -1).join(' '), arr.slice(-1)[0]].join(arr.length <5  ? ' ' : ', ');
     return a;
 }
 

@@ -15,9 +15,10 @@
 // ------------------------
 
 const oddFiltration = (arr) => {
-    
- let newarr = arr.filter(num => { return num % 2 !== 0 })
-return newarr;
+
+    let newarr = arr.filter(num => { return num % 2 !== 0 })
+    return newarr;
+
 }
 // 2) ---------------------
 // 
@@ -52,7 +53,7 @@ return newarr;
 //     }
 // ]
 //
-//   ===>
+// 
 //
 // [
 //     {
@@ -67,11 +68,13 @@ return newarr;
 // ------------------------
 
 const cvsFiltration = (arr) => {
+
 arr = arr.filter(opj => { return arr.yearsOfExperience > 4 && arr.tech == 'JS' })
 //   let fullName= arr.firstName + arr.lastName;
 
 return arr;
 }
+
 
 // 3) ---------------------
 //
@@ -83,9 +86,14 @@ return arr;
 // ------------------------
 
 const vowelsFiltration = (arr) => {
+
     const matches = arr.match(/[aeiou]/gi);
     // arr.filter(str => { return arr.match(/^[aeiou]g/).test(arr) });
     return arr;
+
+    let arr1 = arr.filter(str => { return str.match(/^[aeiou]g/).test(str) });
+    return arr1;
+
 }
 
 // 4) ---------------------
@@ -103,12 +111,15 @@ const vowelsFiltration = (arr) => {
 // ------------------------
 
 const skillComparison = (arr1, arr2) => {
+
 let arr3 =[];
    let res = arr1.filter(item => !arr2.includes(item));
    let rex = arr2.filter(item => !arr1.includes(item));
    const all = [...res, ...rex];
 //    arr3 = res+rex;
    return all;
+
+   
 
 }
 

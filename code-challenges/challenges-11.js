@@ -124,14 +124,18 @@ return result;
 // -------------
 
 function gradesAvg(arr) {
-        
-    var newArr =arr.map(function(val, length){
+    var gradsList = Object.entries(arr).map(el => el[1].gradsList);
+    var avg = gradsList.reduce((a,c) => a + c) / gradsList.length;
+   return avg;
 
-        return {value:val+val/arr.length+1};
-      newarr.Push(avg)
-    })
-    return newArr;
 }
+    // var newArr =arr.map(function(val, length){
+
+    //     return {value:val+val/arr.length+1};
+    //   newArr.Push(avg)
+    // })
+    // return newArr;
+
 
 
 // 4) ---------------------

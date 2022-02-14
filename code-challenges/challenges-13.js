@@ -105,19 +105,12 @@ const stringReverse = (str) => {
 // ------------------------
 
 const statistics = (obj) => {
-  let res = res.reduce(function (a, b) {
-    if (!a[b]) {
-
-      a[b] = 1;
-    } else {
-
-      a[b]++;
-    }
-
-    return a;
-  }, {});
-
-  return res;
+  obj.reduce((r, { name, orders}) => {
+    r[name]  = {  name,  count= 0,  orders= 0};
+    r[name].count++;
+    r[name].orders += orders;
+    return r;
+}, {})
 }
 
 

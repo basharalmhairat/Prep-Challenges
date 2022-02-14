@@ -17,11 +17,11 @@
 
 function square(arr) {
 
-    let newarr = arr.map(function(num) {
-        return num * num
-      })
+
+    let newarr = arr.map(function(num) {return num * num})
       return newarr;
     }
+
 // 2) ------------------
 //s
 // Ex:
@@ -58,11 +58,11 @@ function square(arr) {
 //
 
 function fullName(item) {
-    let result = item.map(opj =>{ return `${opj.firstName} ${opj.lastName}`})
-    
-return result;
-    }
-   
+    let result = item.map(opj => { return `${opj.firstName} ${opj.lastName}` })
+
+    return result;
+}
+
 
 
 // 3) ---------------------
@@ -121,9 +121,10 @@ return result;
 //      avg: 11.75
 // 	}
 //]
-// -------------
+
 
 function gradesAvg(arr) {
+
     var gradsList = Object.entries(arr).map(el => el[1].gradsList);
     var avg = gradsList.reduce((a,c) => a + c) / gradsList.length;
    return avg;
@@ -138,6 +139,23 @@ function gradesAvg(arr) {
 
 
 
+
+
+    
+    function avg(item) {
+
+    
+        let result = item.map(opj => { item.gradsList })
+
+        for (let i = 0; i < arrl.length; i++) {
+               let total = value[i]+=value[i] 
+                let avg = total / arr.length +1;
+       
+      }
+
+      return gradesAvg;
+}
+} 
 // 4) ---------------------
 //
 // Using the previous function result, determine if the student pass or failed,
@@ -205,10 +223,10 @@ function gradesAvg(arr) {
 // -------------
 
 function studentsResult(arr) {
-         
-    var newArr = arr.map(function(val, index){
-        return {key:index, value:avg};
-        
+
+    var newArr = arr.map(function (val, index) {
+        return { key: index, value: avg };
+
     })
 }
 

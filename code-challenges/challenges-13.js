@@ -37,8 +37,10 @@
 
 // ------------------------
 
+
 const objectCounter = (obj) => {let res = obj.reduce((count, x) => count + 1, 0);
   return res;
+
 
 }
 
@@ -57,14 +59,11 @@ const objectCounter = (obj) => {let res = obj.reduce((count, x) => count + 1, 0)
 
 const stringReverse = (str) => {
 
+
   return str.split(' ').reduce((r, c)=> c +' '+ r);
 };
 
-  //  let res = str.reduce((list, current) =>  list.unshift(current));
-  //   return res;
-  
-
-
+       
 
 // 3) ---------------------
 // 
@@ -105,13 +104,26 @@ const stringReverse = (str) => {
 // ------------------------
 
 const statistics = (obj) => {
+
   obj.reduce((r, { name, orders}) => {
     r[name]  = {  name,  count= 0,  orders= 0};
     r[name].count++;
     r[name].orders += orders;
     return r;
 }, {})
-}
+
+
+
+  let arr = ' ';
+   return arr.reduce(function (allNames, name) {
+    if (name in allNames) {
+      allNames[name]++
+    }
+    else {
+      allNames[name] = 1
+    }
+    return allNames
+  })}   
 
 
 

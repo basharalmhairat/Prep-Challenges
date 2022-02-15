@@ -40,15 +40,12 @@ const recursionPattern = (int1, int2) => {
 // 
 
 const filterLinks = (str) => {
-    var content_holder = "";
 
-    for (var i = 0; i < str.length; i++) {
-      if (str.charAt(i) === '>') {continue;}
-        while (str.charAt(i) != '<') {content_holder += str.charAt(i);}
-      }
-  
+    let extractQuote = str.match(/(?:www[^"]*com|^[^org]*$)/)
+  str.replace(/[]/g, "");
+return (extractQuote);
+
     
-    return(content_holder);
 }
 // -------------------------------------------------------------------------------------------------------
 

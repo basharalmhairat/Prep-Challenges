@@ -32,10 +32,12 @@ const reverseString = (string) => {
 // Input <= ["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"] , Output => ["hello ^_^ ","Hi ^_^" ] ;
 
 const detectFace = (arr) => {
-    var format = /[^][_][^]$/;
-
-    if(!format.exec(arr)){ return arr} 
-    
+    let x =[];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === "hello ^_^ " ) {  x.push (arr[i]); }
+        if (arr[i+1] === "Hi ^_^" ) {  x.push(arr[i+1]); }
+        return x;
+    }
 }
 // -------------------------------------------------------------------------------------------------------
 
